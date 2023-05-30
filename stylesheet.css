@@ -111,6 +111,12 @@ name {
   position: relative;
 }
 
+.right {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .two {
   width: 160px;
   height: 160px;
