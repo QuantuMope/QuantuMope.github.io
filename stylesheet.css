@@ -92,17 +92,19 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 28px;
+  font-weight: bold
 }
 
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700
 }
 
 name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 48px;
+  font-weight: bolder;
 }
 
 .one {
@@ -134,4 +136,51 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+.custom-hr {
+  border: 1px solid #1772d0;
+}
+
+.small-break {
+    display: block;
+    margin-top: 5px; /* Adjust this value to control the size of the line break */
+}
+
+.timeline {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.timeline-item {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item .content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.timeline-item .year {
+    width: 15%;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.timeline-item .logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.timeline-item .description {
+    max-width: 60%;
 }
