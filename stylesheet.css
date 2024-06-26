@@ -149,16 +149,25 @@ span.highlight {
 
 .timeline {
     max-width: 100%;
-    margin: 20px auto;
-    padding: 10px 0;
+    width: 100%;
+    /*margin: 0 0;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    padding: 0 5px;
     list-style: none;
+    /*horiz-align: left;*/
 }
 
 .timeline-item {
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     position: relative;
+    width: 100%; /* Ensure the item takes the full width */
+}
+
+.timeline-item.full-width {
+    flex-direction: column; /* Makes the item span the full width */
 }
 
 .timeline-item .content {
@@ -168,19 +177,31 @@ span.highlight {
 }
 
 .timeline-item .year {
-    width: 15%;
+    width: 10%;
     text-align: right;
     padding-right: 10px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .timeline-item .logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin-right: 20px;
     object-fit: cover;
 }
 
 .timeline-item .description {
-    max-width: 60%;
+    max-width: 90%; /* Allow more space for the description */
+    flex: 1;
+}
+
+/* Ensures the full-width class does not restrict content width */
+.timeline-item.full-width .year,
+.timeline-item.full-width .description,
+.timeline-item.full-width .logo {
+    width: auto;
+    max-width: none;
+    text-align: center;
+    padding-right: 0;
+    margin-right: 0;
 }
