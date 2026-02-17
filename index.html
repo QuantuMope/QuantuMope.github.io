@@ -69,20 +69,20 @@
                             During my Ph.D., my research involved fields such as robotics,
                             physical simulation, perception, and machine learning. Key focuses involved developing
                             fast, accurate simulators for soft robots / deformable structures, and
-                            leveraging simulations to learn robust sim2real policies for robotic deformable object manipulation.
+                            leveraging simulations to learn robust sim-to-real policies for robotic deformable object manipulation.
                         </p>
                         <p>
-                            As of now, my current research focuses pertain to general robotic AI.
-                            I am particularly interested in leveraging large datasets for creating efficient and
-                            general learning pipelines via reinforcement learning and foundational models.
+                            As of now, my current research focuses pertain to general robotic AI (see CV for more details).
+                            I am particularly interested in leveraging highly parallelized GPU simulation for sim-to-real RL fine-tuning VLAs to
+                            obtain high-performing, generalizable robot policies.
                         </p>
                         <p>
-                            I am the main developer for the soft robotics / structures simulation framework
+                            I love to code 🖥️. I am the main developer for the soft robotics / structures simulation framework
                             <a href="https://github.com/StructuresComp/dismech-rods">DisMech</a>, where I try to
-                            actively maintain the project in my free time.
+                            maintain the project in my free time.
                         </p>
                         <p>
-                            Website last updated on Sep 2nd, 2025.
+                            Website last updated on Feb 17, 2026.
                         </p>
 
                     </td>
@@ -246,6 +246,34 @@
             </table>
             <table style="width:100%;border:20px;;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <table>
+
+                    <tr>
+                        <td style="padding-left:20px;width:10%;vertical-align:middle">
+                            <img src='images/obs_3d.gif' width="180">
+                        </td>
+                        <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
+                            <a href="https://arxiv.org/abs/2511.06667">
+                                <papertitle>Rapidly Learning Soft Robot Control via Implicit Time-Stepping
+                                </papertitle>
+                            </a>
+                            <span class="small-break"></span>
+                            <color style="color:royalblue">
+                                <strong>Andrew Choi</strong>
+                                and Dezhong Tong
+                            </color>
+                            <br>
+                            <em></em>arXiv, 2025
+                            <br>
+                            <a href="https://github.com/QuantuMope/dismech-rl">Source Code</a>
+                            <p>
+                                Implicit soft-body simulation for scalable soft robot policy learning.
+                                Parallel stepping yields up to 6× speedup in non-contact and 40× in contact-rich scenarios over existing frameworks.
+                                Cross-simulator evaluations reveal minimal sim-to-sim gap, demonstrating substantial acceleration without loss of physical fidelity.
+                            </p>
+                        </td>
+                    </tr>
+
+
                     <tr>
                         <td style="width:10%;vertical-align:middle">
                             <img src='images/slim.gif' width="220">
@@ -271,60 +299,15 @@
                             <br>
                             <a href="https://horizonrobotics.github.io/gail/SLIM/">Project Page</a>
                             <p>
-                                End-to-end visuomotor policy learning for sim2real quadruped mobile manipulation.
+                                End-to-end visuomotor policy learning for sim-to-real quadruped mobile manipulation.
                                 Policies are trained using a teacher-student framework on a multi-stage pick-and-place task and
                                 transfer with ~80% success to real hardware.
                                 Emergent behaviors include re-grasping and task chaining, with extensive ablations
-                                identifying key ingredients for successful sim2real transfer.
+                                identifying key ingredients for successful sim-to-real transfer.
                             </p>
                         </td>
                     </tr>
 
-
-                    <tr>
-                        <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/folding_iso.gif' width="180">
-                        </td>
-                        <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://arxiv.org/abs/2301.01968">
-                                <papertitle>Learning Neural Force Manifolds for Sim2Real Robotic Symmetrical Paper
-                                    Folding
-                                </papertitle>
-                            </a>
-                            <span class="small-break"></span>
-                            <color style="color:royalblue">
-                                <strong>Andrew Choi*</strong>,
-                                Dezhong Tong<strong>*</strong>,
-                                Demetri Terzopoulos,
-                                Jungseock Joo,
-                                and M. Khalid Jawed
-                            </color>
-
-                            <br>
-                            <em>IEEE Transactions on Automation Science and Engineering </em><b>(T-ASE)</b>, 2025
-                            <span class="right">(<strong>*</strong> equal contribution)</span>
-                            <br>
-                            <a href="https://github.com/StructuresComp/deep-robotic-paper-folding">Source Code</a>
-                            /
-                            <a href="https://www.youtube.com/watch?v=k0nexYGy-P4">Video</a>
-                            /
-                            <a href="https://meetings.aps.org/Meeting/MAR23/Session/Q10.5">Oral Presentation</a>
-                            /
-                            <a href="https://techxplore.com/news/2023-01-method-enable-robotic-paper-based.html">News
-                                Coverage</a>
-                            <p></p>
-                            <p>
-                                End-to-end pipeline for full sim2real robotic paper folding.
-                                Neural force manifolds are learned from physical simulation and are used to generate
-                                optimal
-                                folding trajectories.
-                                Scaling analysis is used to obtain a generalizable control policy with respect to
-                                material
-                                and
-                                geometric parameters.
-                            </p>
-                        </td>
-                    </tr>
 
                     <tr>
                         <td style="padding-left:20px;padding-right:20px;width:10%;vertical-align:middle;">
@@ -386,7 +369,7 @@
                             /
                             <a href="https://www.youtube.com/watch?v=OSD6dhOgyMA">Video</a>
                             <p>
-                                End-to-end pipeline for full sim2real robotic DLO deployment.
+                                End-to-end pipeline for full sim-to-real robotic DLO deployment.
                                 Physical simulations are used to train a neural controller capable of deploying rods
                                 along a
                                 prescribed pattern.
@@ -396,6 +379,52 @@
                             </p>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td style="padding-left:20px;width:10%;vertical-align:middle">
+                            <img src='images/folding_iso.gif' width="180">
+                        </td>
+                        <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
+                            <a href="https://arxiv.org/abs/2301.01968">
+                                <papertitle>Learning Neural Force Manifolds for Sim2Real Robotic Symmetrical Paper
+                                    Folding
+                                </papertitle>
+                            </a>
+                            <span class="small-break"></span>
+                            <color style="color:royalblue">
+                                <strong>Andrew Choi*</strong>,
+                                Dezhong Tong<strong>*</strong>,
+                                Demetri Terzopoulos,
+                                Jungseock Joo,
+                                and M. Khalid Jawed
+                            </color>
+
+                            <br>
+                            <em>IEEE Transactions on Automation Science and Engineering </em><b>(T-ASE)</b>, 2024
+                            <span class="right">(<strong>*</strong> equal contribution)</span>
+                            <br>
+                            <a href="https://github.com/StructuresComp/deep-robotic-paper-folding">Source Code</a>
+                            /
+                            <a href="https://www.youtube.com/watch?v=k0nexYGy-P4">Video</a>
+                            /
+                            <a href="https://meetings.aps.org/Meeting/MAR23/Session/Q10.5">Oral Presentation</a>
+                            /
+                            <a href="https://techxplore.com/news/2023-01-method-enable-robotic-paper-based.html">News
+                                Coverage</a>
+                            <p></p>
+                            <p>
+                                End-to-end pipeline for full sim-to-real robotic paper folding.
+                                Neural force manifolds are learned from physical simulation and are used to generate
+                                optimal
+                                folding trajectories.
+                                Scaling analysis is used to obtain a generalizable control policy with respect to
+                                material
+                                and
+                                geometric parameters.
+                            </p>
+                        </td>
+                    </tr>
+
 
 
                     <tr>
@@ -726,7 +755,7 @@
                                         An Arduino controlled robot dog that I created while healing from a knee
                                         surgery.
                                         Can do simple functionalities such as sit and respond to praise.
-                                        So far, the YouTube video has amassed over 135000 views!
+                                        So far, the YouTube video has amassed over 190000 views!
                                     </p>
                                 </td>
                             </tr>
@@ -756,7 +785,7 @@
                                         University</a>, resulting in an all expense paid trip to Japan to present the
                                         robot.
                                         Was featured on several news outlets.
-                                        So far, the YouTube video has amassed over 55000 views!
+                                        So far, the YouTube video has amassed over 59000 views!
                                     </p>
                                 </td>
                             </tr>
