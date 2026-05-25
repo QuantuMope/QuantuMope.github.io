@@ -25,7 +25,7 @@
                 <tbody>
                 <tr>
                     <td style="padding:20px;width:100%;vertical-align:middle">
-                        <p style="text-align:right">
+                        <p class="top-nav">
                             <a href="mailto:asjchoi@g.ucla.com">Email</a> &nbsp/&nbsp
                             <a href="data/CV.pdf">CV</a> &nbsp/&nbsp
                             <a href="https://www.linkedin.com/in/andrew-choi-42a062169/"><img
@@ -51,39 +51,42 @@
                             <name>Andrew Sang-Jin Choi</name>
                         </p>
 
+
                         <p>
+
                             Hi! Thanks for visiting my website ^_^
                         </p>
 
-                        <p> I am currently a research scientist on the General AI team at Horizon Robotics.
-                            Before that, I obtained my Ph.D. in computer science at <a href="https://www.cs.ucla.edu/">UCLA</a>,
-                            where
-                            I was a member of the <a href="https://structures.computer/">Structures-Computer Interaction
-                                (SCI) Lab</a>.
-                            There, I was co-advised by Professors <a href="http://www.khalidjawed.com/">M. Khalid
-                                Jawed</a>, <a
-                                    href="https://www.jsjoo.com/">Jungseock Joo</a>, and <a
-                                    href="https://web.cs.ucla.edu/~dt/">Demetri Terzopoulos</a>.
-                        </p>
                         <p>
-                            During my Ph.D., my research involved fields such as robotics,
-                            physical simulation, perception, and machine learning. Key focuses involved developing
-                            fast, accurate simulators for soft robots / deformable structures, and
-                            leveraging simulations to learn robust sim-to-real policies for robotic deformable object manipulation.
+                            I am currently a research scientist on the General AI team at Horizon Robotics.
+                            Before that, I obtained my Ph.D. in Computer Science at UCLA, where I was a member of the
+                            <a href="https://structures.computer/">Structures-Computer Interaction (SCI) Lab</a>.
+                            There, I was co-advised by Professors
+                            <a href="http://www.khalidjawed.com/">M. Khalid Jawed</a>,
+                            <a href="https://www.jsjoo.com/">Jungseock Joo</a>, and
+                            <a href="https://web.cs.ucla.edu/~dt/">Demetri Terzopoulos</a>.
                         </p>
+
                         <p>
-                            As of now, my current research focuses pertain to general robotic AI (see CV for more details).
-                            I am particularly interested in leveraging highly parallelized GPU simulation for sim-to-real RL fine-tuning VLAs to
-                            obtain high-performing, generalizable robot policies.
+                            During my Ph.D., my research focused on robotics, physical simulation, and perception.
+                            In particular, I worked on developing fast, accurate simulators for soft robots and deformable structures,
+                            as well as leveraging simulation to learn robust sim-to-real policies for robotic deformable object manipulation.
                         </p>
+
                         <p>
-                            I love to code 🖥️. I am the main developer for the soft robotics / structures simulation framework
-                            <a href="https://github.com/StructuresComp/dismech-rods">DisMech</a>, where I try to
-                            maintain the project in my free time.
+                            My current research focuses on developing general and scalable solutions for training physical AI.
+                            I am particularly interested in sim-to-real RL fine-tuning and real-world RL fine-tuning of VLAs.
                         </p>
+
                         <p>
-                            Website last updated on Feb 17, 2026.
+                            I love to code 🖥️. I am the main developer of the soft robotics and structures simulation framework
+                            <a href="https://github.com/StructuresComp/dismech-rods">DisMech</a>, which I maintain in my free time.
                         </p>
+
+                        <p>
+                            Website last updated on May 25, 2026.
+                        </p>
+
 
                     </td>
                     <td style="padding-left:2.5%;padding-right:2.5%;width:33%;max-width:40%">
@@ -234,36 +237,89 @@
             </table>
 
 
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <table class="section-heading-table">
                 <tbody>
                 <tr>
-                    <td style="width:100%;vertical-align:middle">
+                    <td class="section-heading-cell">
                         <heading><b>Publications</b></heading>
                         <hr class="custom-hr">
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <table style="width:100%;border:20px;;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <table>
+            <table class="publication-list">
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/obs_3d.gif' width="180">
+                            <img src='images/q_landscape.gif' width="180" class="publication-image-square publication-image-rankq">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
-                            <a href="https://arxiv.org/abs/2511.06667">
-                                <papertitle>Rapidly Learning Soft Robot Control via Implicit Time-Stepping
-                                </papertitle>
-                            </a>
+                            <papertitle>RankQ: Offline-to-Online Reinforcement Learning via Self-Supervised Action Ranking
+                            </papertitle>
+                            <span class="small-break"></span>
+                            <color style="color:royalblue">
+                                <strong>Andrew Choi</strong>
+                                and Wei Xu
+                            </color>
+                            <br>
+                            <em>arXiv</em>, 2026
+                            <br>
+                            <a href="https://arxiv.org/pdf/2605.11151">PDF</a>
+                            /
+                            <a href="https://horizonrobotics.github.io/gail/projects/rankq/">Project Page</a>
+                            <p>
+                                RankQ is an offline-to-online Q-learning objective that augments temporal-difference learning with a self-supervised ranking loss.
+                                For VLA RL fine-tuning, RankQ improves low-data regime simulation success by 42.7% and high-data regime simulation success by 13.7% over the next best method.
+                                RankQ also enables strong sim-to-real transfer, improving real-world cube stacking success from 43.1% to 88.9% relative to the pretrained imitation baseline.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding-left:20px;width:10%;vertical-align:middle">
+                            <img src='images/scale-rl.gif' width="180" class="publication-image-scale-rl">
+                        </td>
+                        <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
+                            <papertitle>Scaling Sim-to-Real Reinforcement Learning for Robot VLAs with Generative 3D Worlds
+                            </papertitle>
+                            <span class="small-break"></span>
+                            <color style="color:royalblue">
+                                <strong>Andrew Choi</strong>,
+                                Xinjie Wang,
+                                Zhizhong Su,
+                                and Wei Xu
+                            </color>
+                            <br>
+                            <em>arXiv</em>, 2026
+                            <br>
+                            <a href="https://arxiv.org/pdf/2603.18532">PDF</a>
+                            /
+                            <a href="https://horizonrobotics.github.io/gail/projects/scaling-sim-to-real-rl-vla/">Project Page</a>
+                            <p>
+                                We leverage 3D world generative models and a language-driven scene designer to scalably generate diverse interactive environments for RL fine-tuning of VLA models.
+                                RL fine-tuning across hundreds of generated scenes improves simulation success from 9.7% to 79.8% and real-world success from 21.7% to 75%.
+                                We further show that increasing scene diversity substantially improves zero-shot generalization.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding-left:20px;width:10%;vertical-align:middle">
+                            <img src='images/obs_3d.gif' width="180" class="publication-image-square publication-image-soft-robot-control">
+                        </td>
+                        <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
+                            <papertitle>Rapidly Learning Soft Robot Control via Implicit Time-Stepping
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 <strong>Andrew Choi</strong>
                                 and Dezhong Tong
                             </color>
                             <br>
-                            <em></em>arXiv, 2025
+                            <em>arXiv</em>, 2025
                             <br>
+                            <a href="https://arxiv.org/pdf/2511.06667">PDF</a>
+                            /
                             <a href="https://github.com/QuantuMope/dismech-rl">Source Code</a>
                             <p>
                                 Implicit soft-body simulation for scalable soft robot policy learning.
@@ -276,13 +332,11 @@
 
                     <tr>
                         <td style="width:10%;vertical-align:middle">
-                            <img src='images/slim.gif' width="220">
+                            <img src='images/slim.gif' width="220" class="publication-image-slim">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
-                            <a href="https://arxiv.org/pdf/2501.09905">
-                                <papertitle>Learning Multi-Stage Pick-and-Place with a Legged Mobile Manipulator
-                                </papertitle>
-                            </a>
+                            <papertitle>Learning Multi-Stage Pick-and-Place with a Legged Mobile Manipulator
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 Haichao Zhang,
@@ -294,9 +348,11 @@
                                 and Wei Xu
                             </color>
                             <br>
-                            <em></em>IEEE Robotics and Automation Letters<b>
+                            <em>IEEE Robotics and Automation Letters</em><b>
                             (RA-L)</b>, 2025
                             <br>
+                            <a href="https://arxiv.org/pdf/2501.09905">PDF</a>
+                            /
                             <a href="https://horizonrobotics.github.io/gail/SLIM/">Project Page</a>
                             <p>
                                 End-to-end visuomotor policy learning for sim-to-real quadruped mobile manipulation.
@@ -311,13 +367,11 @@
 
                     <tr>
                         <td style="padding-left:20px;padding-right:20px;width:10%;vertical-align:middle;">
-                            <img src='images/deep_metric_learning.png' width="180">
+                            <img src='images/deep_metric_learning.png' width="180" class="publication-image-deep-metric-learning">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
-                            <a href="https://openreview.net/pdf?id=uyqjpycMbU">
-                                <papertitle>Integrating Deep Metric Learning with Coreset for Active Learning in 3D Segmentation
-                                </papertitle>
-                            </a>
+                            <papertitle>Integrating Deep Metric Learning with Coreset for Active Learning in 3D Segmentation
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 Arvind Vepa,
@@ -328,9 +382,11 @@
                                 and Yizhou Sun
                             </color>
                             <br>
-                            <em></em>Conference on Neural Information Processing Systems <b>
+                            <em>Conference on Neural Information Processing Systems</em><b>
                             (NeurIPS)</b>, 2024
                             <br>
+                            <a href="https://openreview.net/pdf?id=uyqjpycMbU">PDF</a>
+                            /
                             <a href="https://github.com/arvindmvepa/al-seg">Source Code</a>
                             <p>
                                 Slice-based active learning approach for 3D segmentation.
@@ -345,14 +401,12 @@
 
                     <tr>
                         <td style="padding-left:20px;padding-right:20px;width:10%;vertical-align:middle;">
-                            <img src='images/deployment.gif' width="180">
+                            <img src='images/deployment.gif' width="180" class="publication-image-square publication-image-rod-deployment">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle;">
-                            <a href="https://journals.sagepub.com/doi/abs/10.1177/02783649231214553">
-                                <papertitle>Sim2Real Neural Controllers for Physics-Based Robotic Deployment of
-                                    Deformable Linear Objects
-                                </papertitle>
-                            </a>
+                            <papertitle>Sim2Real Neural Controllers for Physics-Based Robotic Deployment of
+                                Deformable Linear Objects
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 Dezhong Tong,
@@ -365,6 +419,8 @@
                             <br>
                             <em>The International Journal of Robotics Research </em><b>(IJRR)</b>, 2024
                             <br>
+                            <a href="https://arxiv.org/pdf/2303.02574">PDF</a>
+                            /
                             <a href="https://github.com/StructuresComp/rod-deployment">Source Code</a>
                             /
                             <a href="https://www.youtube.com/watch?v=OSD6dhOgyMA">Video</a>
@@ -382,14 +438,12 @@
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/folding_iso.gif' width="180">
+                            <img src='images/folding_iso.gif' width="180" class="publication-image-square publication-image-paper-folding">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://arxiv.org/abs/2301.01968">
-                                <papertitle>Learning Neural Force Manifolds for Sim2Real Robotic Symmetrical Paper
-                                    Folding
-                                </papertitle>
-                            </a>
+                            <papertitle>Learning Neural Force Manifolds for Sim2Real Robotic Symmetrical Paper
+                                Folding
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 <strong>Andrew Choi*</strong>,
@@ -403,6 +457,8 @@
                             <em>IEEE Transactions on Automation Science and Engineering </em><b>(T-ASE)</b>, 2024
                             <span class="right">(<strong>*</strong> equal contribution)</span>
                             <br>
+                            <a href="https://arxiv.org/pdf/2301.01968">PDF</a>
+                            /
                             <a href="https://github.com/StructuresComp/deep-robotic-paper-folding">Source Code</a>
                             /
                             <a href="https://www.youtube.com/watch?v=k0nexYGy-P4">Video</a>
@@ -429,14 +485,12 @@
 
                     <tr>
                         <td style="width:10%;vertical-align:middle">
-                            <img src='images/dismech.gif' width="220">
+                            <img src='images/dismech.gif' width="220" class="publication-image-dismech">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://arxiv.org/abs/2311.18126">
-                                <papertitle> DisMech: A Discrete Differential Geometry-based
-                                    Physical Simulator for Soft Robots and Structures
-                                </papertitle>
-                            </a>
+                            <papertitle> DisMech: A Discrete Differential Geometry-based
+                                Physical Simulator for Soft Robots and Structures
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 <strong>Andrew Choi</strong>,
@@ -448,6 +502,7 @@
                             <br>
                             <em>IEEE Robotics and Automation Letters </em><b>(RA-L)</b>, 2024
                             <br>
+                            <a href="https://arxiv.org/pdf/2311.18126">PDF</a> /
                             <a href="https://github.com/StructuresComp/dismech-rods">Source Code</a> /
                             <a href="https://www.youtube.com/watch?v=0jE9h5GpOek&t=2s">Video</a> /
                             <a href="https://meetings.aps.org/Meeting/MAR24/Session/D38.7">Oral Presentation</a>
@@ -466,15 +521,13 @@
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/mbest_stacked.gif' width="180">
+                            <img src='images/mbest_stacked.gif' width="180" class="publication-image-wide publication-image-mbest">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://ieeexplore.ieee.org/document/10167643">
-                                <papertitle>mBEST: Realtime Deformable Linear Object Detection Through Minimal
-                                    Bending
-                                    Energy Skeleton Pixel Traversals
-                                </papertitle>
-                            </a>
+                            <papertitle>mBEST: Realtime Deformable Linear Object Detection Through Minimal
+                                Bending
+                                Energy Skeleton Pixel Traversals
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 <strong>Andrew Choi</strong>,
@@ -487,6 +540,8 @@
                             <br>
                             <em>IEEE Robotics and Automation Letters </em><b>(RA-L)</b>, 2023
                             <br>
+                            <a href="https://arxiv.org/pdf/2302.09444">PDF</a>
+                            /
                             <a href="https://github.com/StructuresComp/mBEST">Source Code & Data</a>
                             /
                             <a href="https://www.youtube.com/watch?v=q84I9i0DOK4">Video</a>
@@ -504,14 +559,12 @@
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/imv_v2.gif' width="180">
+                            <img src='images/imv_v2.gif' width="180" class="publication-image-square publication-image-rod-contact">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352431622002000">
-                                <papertitle>A Fully Implicit Method for Robust Frictional Contact Handling in Elastic
-                                    Rods
-                                </papertitle>
-                            </a>
+                            <papertitle>A Fully Implicit Method for Robust Frictional Contact Handling in Elastic
+                                Rods
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 Dezhong Tong<strong>*</strong>,
@@ -523,6 +576,8 @@
                             <em>Extreme Mechanics Letters </em><b>(EML)</b>, 2023
                             <span class="right">(<strong>*</strong> equal contribution)</span>
                             <br>
+                            <a href="https://arxiv.org/pdf/2205.10309">PDF</a>
+                            /
                             <a href="https://github.com/StructuresComp/rod-contact-sim">Source Code</a>
                             /
                             <a href="https://www.youtube.com/watch?v=g0rlCFfWJ8U&t=26s">Video</a>
@@ -540,12 +595,10 @@
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/buckling.gif' width="180">
+                            <img src='images/buckling.gif' width="180" class="publication-image-snap-buckling">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://asmedigitalcollection.asme.org/appliedmechanics/article-abstract/90/4/041008/1154422/Snap-Buckling-in-Overhand-Knots">
-                                <papertitle>Snap Buckling in Overhand Knots</papertitle>
-                            </a>
+                            <papertitle>Snap Buckling in Overhand Knots</papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 Dezhong Tong,
@@ -557,6 +610,8 @@
                             <br>
                             <em>Journal of Applied Mechanics </em><b>(JAM)</b>, 2023
                             <br>
+                            <a href="https://asmedigitalcollection.asme.org/appliedmechanics/article-abstract/90/4/041008/1154422/Snap-Buckling-in-Overhand-Knots">PDF</a>
+                            /
                             <a href="https://github.com/StructuresComp/snap-buckling-knots">Source Code</a>
                             /
                             <a href="https://www.youtube.com/watch?v=g0rlCFfWJ8U&t=26s">Video</a>
@@ -571,13 +626,11 @@
 
                     <tr>
                         <td style=";width:10%;vertical-align:middle">
-                            <img src='images/pmp.gif' width="220">
+                            <img src='images/pmp.gif' width="220" class="publication-image-pmp">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:75%;vertical-align:middle">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/9811558">
-                                <papertitle>Preemptive Motion Planning for Human-to-Robot Indirect Placement Handovers
-                                </papertitle>
-                            </a>
+                            <papertitle>Preemptive Motion Planning for Human-to-Robot Indirect Placement Handovers
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 <strong>Andrew Choi</strong>,
@@ -587,6 +640,8 @@
                             <br>
                             <em>IEEE International Conference on Robotics and Automation </em><b>(ICRA)</b>, 2022
                             <br>
+                            <a href="https://arxiv.org/pdf/2203.00156">PDF</a>
+                            /
                             <a href="https://pmp-human-to-robot.github.io/">Project Page</a>
                             /
                             <a href="https://www.youtube.com/watch?v=O1oz8yw_Er0&t=6s">Video</a>
@@ -603,15 +658,13 @@
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/vessel_seg.gif' width="180">
+                            <img src='images/vessel_seg.gif' width="180" class="publication-image-square publication-image-vessel-seg">
                         </td>
                         <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                            <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Vepa_Weakly-Supervised_Convolutional_Neural_Networks_for_Vessel_Segmentation_in_Cerebral_Angiography_WACV_2022_paper.pdf">
-                                <papertitle>Weakly-Supervised Convolutional Neural Networks for Vessel Segmentation
-                                    in
-                                    Cerebral Angiography
-                                </papertitle>
-                            </a>
+                            <papertitle>Weakly-Supervised Convolutional Neural Networks for Vessel Segmentation
+                                in
+                                Cerebral Angiography
+                            </papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 Arvind Vepa,
@@ -623,6 +676,8 @@
                             <br>
                             <em>IEEE/CVF Winter Conference on Applications of Computer Vision </em><b>(WACV)</b>, 2022
                             <br>
+                            <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Vepa_Weakly-Supervised_Convolutional_Neural_Networks_for_Vessel_Segmentation_in_Cerebral_Angiography_WACV_2022_paper.pdf">PDF</a>
+                            /
                             <a href="https://github.com/arvindmvepa/dsa-vessel-seg">Source Code & Data</a>
                             <p></p>
                             <p>
@@ -637,12 +692,10 @@
 
                     <tr>
                         <td style="padding-left:20px;width:10%;vertical-align:middle">
-                            <img src='images/imc_v1.gif' width="180">
+                            <img src='images/imc_v1.gif' width="180" class="publication-image-square publication-image-imc">
                         </td>
                         <td style="padding-left:30px;padding-top:15;width:90%;vertical-align:middle">
-                            <a href="https://asmedigitalcollection.asme.org/appliedmechanics/article/88/5/051010/1099667">
-                                <papertitle>Implicit Contact Model for Discrete Elastic Rods in Knot Tying</papertitle>
-                            </a>
+                            <papertitle>Implicit Contact Model for Discrete Elastic Rods in Knot Tying</papertitle>
                             <span class="small-break"></span>
                             <color style="color:royalblue">
                                 <strong>Andrew Choi</strong>,
@@ -653,6 +706,8 @@
                             <br>
                             <em>Journal of Applied Mechanics </em><b>(JAM)</b>, 2021
                             <br>
+                            <a href="https://asmedigitalcollection.asme.org/appliedmechanics/article/88/5/051010/1099667">PDF</a>
+                            /
                             <a href="https://github.com/QuantuMope/imc-der">Source Code</a>
                             /
                             <a href="https://www.youtube.com/watch?v=yq4-m0G0D4g">Video</a>
@@ -666,27 +721,27 @@
                         </td>
                     </tr>
 
-                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            </table>
+
+                    <table class="section-heading-table">
                         <tbody>
                         <tr>
-                            <td style="padding-top:30px;width:100%;vertical-align:middle">
+                            <td class="section-heading-cell section-heading-cell-spaced">
                                 <heading>Misc. Robotics Software</heading>
                                 <hr class="custom-hr">
                             </td>
                         </tr>
                         </tbody>
                     </table>
-                    <table>
+                    <table class="publication-list">
 
                         <tr>
                             <td style="padding-left:20px;width:10%;vertical-align:middle">
-                                <img src='images/4dof.png' width="180">
+                                <img src='images/4dof.png' width="180" class="publication-image-square publication-image-handeye-4dof">
                             </td>
                             <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                                <a href="https://github.com/QuantuMope/handeye-4dof">
-                                    <papertitle>Handeye Calibration Module for 4DOF Manipulators using Dual Quaternions
-                                    </papertitle>
-                                </a>
+                                <papertitle>Handeye Calibration Module for 4DOF Manipulators using Dual Quaternions
+                                </papertitle>
                                 <span class="small-break"></span>
                                 <em>GitHub Repository</em>, 2021
                                 <br>
@@ -697,19 +752,16 @@
                                     Ulrich.
                                     Completed as part of an internship at <a href="https://www.vecnarobotics.com/">Vecna
                                     Robotics</a>.
-                                <p></p>
                                 </p>
                             </td>
                         </tr>
 
                         <tr>
                             <td style="padding-left:20px;width:10%;vertical-align:middle">
-                                <img src='images/ros_openpose.gif' width="180">
+                                <img src='images/ros_openpose.gif' width="180" class="publication-image-ros-openpose">
                             </td>
                             <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                                <a href="https://github.com/ravijo/ros_openpose">
-                                    <papertitle>ROS OpenPose</papertitle>
-                                </a>
+                                <papertitle>ROS OpenPose</papertitle>
                                 <span class="small-break"></span>
                                 <em>GitHub Repository</em>, 2019
                                 <br>
@@ -723,27 +775,27 @@
                             </td>
                         </tr>
 
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                    </table>
+
+                        <table class="section-heading-table">
                             <tbody>
                             <tr>
-                                <td style="padding-top:30px;width:100%;vertical-align:middle">
+                                <td class="section-heading-cell section-heading-cell-spaced">
                                     <heading>Undergraduate Robotics Projects</heading>
                                     <hr class="custom-hr">
                                 </td>
                             </tr>
                             </tbody>
                         </table>
-                        <table width="100%" align="center" border="0" cellpadding="20">
+                        <table class="publication-list">
                             <tbody>
 
                             <tr>
                                 <td style="padding-left:20px;width:10%;vertical-align:middle">
-                                    <img src='images/duke.gif' width="180">
+                                    <img src='images/duke.gif' width="180" class="publication-image-duke">
                                 </td>
                                 <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                                    <a href="https://github.com/QuantuMope/duke-robodog">
-                                        <papertitle>Duke: Voice Controlled Robot Dog</papertitle>
-                                    </a>
+                                    <papertitle>Duke: Voice Controlled Robot Dog</papertitle>
                                     <span class="small-break"></span>
                                     <em>For Fun Project</em>, 2019
                                     <br>
@@ -762,12 +814,10 @@
 
                             <tr>
                                 <td style="padding-left:20px;width:10%;vertical-align:middle">
-                                    <img src='images/grimdor.gif' width="180">
+                                    <img src='images/grimdor.gif' width="180" class="publication-image-grimdor">
                                 </td>
                                 <td style="padding-left:30px;padding-top:15px;width:90%;vertical-align:middle">
-                                    <a href="https://github.com/QuantuMope/grimdor-shoe-tying-robot">
-                                        <papertitle>Grimdor: Underactuated Shot Tying Manipulator</papertitle>
-                                    </a>
+                                    <papertitle>Grimdor: Underactuated Shot Tying Manipulator</papertitle>
                                     <span class="small-break"></span>
                                     <em>Undergraduate Senior Design Project</em>, 2018
                                     <br>
@@ -790,6 +840,7 @@
                                 </td>
                             </tr>
 
+                            </tbody>
                         </table>
                         <hr class="custom-hr">
                         <div id="clustrmaps-widget" style="width:50%;margin: 0 auto;">
@@ -810,9 +861,6 @@
                             </tr>
                             </tbody>
                         </table>
-                    </table>
-                </table>
-            </table>
         </td>
     </tr>
 </table>

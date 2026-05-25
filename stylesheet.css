@@ -94,12 +94,12 @@ a {
 strong {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 18px;
-    color: dodgerblue;
+    color: #1f6fbf;
 }
 
 emphasis {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    color: royalblue;
+    color: #2f5fa8;
 }
 
 heading {
@@ -110,7 +110,7 @@ heading {
 
 papertitle {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 700;
     color: midnightblue;
 }
@@ -146,13 +146,264 @@ span.highlight {
     background-color: #ffffd0;
 }
 
+:root {
+    --entry-text-size: 17px;
+    --section-divider-color: #1772d0;
+    --entry-divider-color: #e6edf5;
+}
+
 .custom-hr {
-    border: 1px solid #1772d0;
+    border: 0;
+    border-top: 2px solid var(--section-divider-color);
+}
+
+.top-nav {
+    text-align: right;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.top-nav img {
+    vertical-align: -3px;
+    margin-right: 3px;
 }
 
 .small-break {
     display: block;
     margin-top: 5px; /* Adjust this value to control the size of the line break */
+}
+
+.section-heading-table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-heading-cell {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.section-heading-cell-spaced {
+    padding-top: 30px;
+}
+
+.publication-list {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin: 6px auto 0 auto;
+}
+
+.publication-list tr {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 24px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--entry-divider-color);
+}
+
+.publication-list tr:first-child {
+    padding-top: 8px;
+}
+
+.publication-list tr:last-child {
+    border-bottom: 0;
+}
+
+.publication-list td {
+    width: auto !important;
+    padding: 0 !important;
+    vertical-align: middle;
+}
+
+.publication-list td:first-child {
+    text-align: center;
+}
+
+.publication-list img {
+    display: block;
+    width: var(--publication-image-width, auto);
+    height: var(--publication-image-height, 185px);
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+    clip-path: inset(0 round 10px);
+    background: transparent;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.publication-list img:hover {
+    transform: scale(1.015);
+    filter: brightness(1.03);
+}
+
+.publication-list img.publication-image-square {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+/* Per-publication thumbnail tuning */
+.publication-list img.publication-image-rankq {
+    --publication-image-width: 220px;
+    --publication-image-height: 220px;
+}
+
+.publication-list img.publication-image-scale-rl {
+    --publication-image-width: auto;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-soft-robot-control {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-slim {
+    --publication-image-width: auto;
+    --publication-image-height: 145px;
+}
+
+.publication-list img.publication-image-deep-metric-learning {
+    --publication-image-width: auto;
+    --publication-image-height: 145px;
+}
+
+.publication-list img.publication-image-rod-deployment {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-paper-folding {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-dismech {
+    --publication-image-width: auto;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-mbest {
+    --publication-image-width: auto;
+    --publication-image-height: 205px;
+}
+
+.publication-list img.publication-image-rod-contact {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-snap-buckling {
+    --publication-image-width: auto;
+    --publication-image-height: 205px;
+}
+
+.publication-list img.publication-image-pmp {
+    --publication-image-width: auto;
+    --publication-image-height: 165px;
+}
+
+.publication-list img.publication-image-vessel-seg {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-imc {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+/* Per-project thumbnail tuning */
+.publication-list img.publication-image-handeye-4dof {
+    --publication-image-width: 185px;
+    --publication-image-height: 185px;
+}
+
+.publication-list img.publication-image-ros-openpose {
+    --publication-image-width: auto;
+    --publication-image-height: 135px;
+}
+
+.publication-list img.publication-image-duke {
+    --publication-image-width: auto;
+    --publication-image-height: 165px;
+}
+
+.publication-list img.publication-image-grimdor {
+    --publication-image-width: auto;
+    --publication-image-height: 145px;
+}
+
+.publication-list .small-break {
+    margin-top: 0;
+}
+
+.publication-list papertitle {
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.publication-list color {
+    display: inline;
+    font-size: var(--entry-text-size);
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.publication-list a,
+.publication-list em,
+.publication-list b,
+.publication-list strong {
+    font-size: var(--entry-text-size);
+}
+
+.publication-list p {
+    margin: 10px 0 0 0;
+    font-size: var(--entry-text-size);
+    line-height: 1.2;
+    color: #333;
+}
+
+.publication-list p:empty {
+    display: none;
+}
+
+.publication-list .right {
+    float: none;
+    display: inline-block;
+    margin: 0 0 0 8px;
+    color: #555;
+}
+
+@media (max-width: 700px) {
+    .publication-list tr {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+        padding: 20px 0;
+    }
+
+    .publication-list td:first-child {
+        text-align: left;
+    }
+
+    .publication-list img {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .publication-list img.publication-image-square {
+        width: min(185px, 100%);
+        height: auto;
+    }
 }
 
 .timeline {
