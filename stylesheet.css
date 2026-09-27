@@ -250,6 +250,11 @@ span.highlight {
 }
 
 /* Per-publication thumbnail tuning */
+.publication-list img.publication-image-embodiedgen {
+    --publication-image-width: 280px;
+    --publication-image-height: auto;
+}
+
 .publication-list img.publication-image-rankq {
     --publication-image-width: 220px;
     --publication-image-height: 220px;
